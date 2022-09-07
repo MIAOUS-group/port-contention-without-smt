@@ -1,0 +1,15 @@
+*.json
+*/build/*
+!.gitkeep
+*/data/*
+!.gitkeep
+*/wasm/*
+!.gitkeep
+__pycache__
+.swp
+data_*
+*.log
+*.wat
+*.bin
+*.csv
+*/data/*
