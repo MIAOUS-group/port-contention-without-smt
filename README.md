@@ -6,7 +6,7 @@ You can find the full paper [here](https://people.irisa.fr/Thomas.Rokicki/public
 ## Prerequisites
 Most experiments have been run on recent linux distributions.
 
-You will need to install wabt with a recent version to compile wasm vector instructions.
+You will need to install [wabt](https://github.com/WebAssembly/wabt) with a recent version to compile wasm vector instructions.
 
 Run `pip install -r requirements.txt` to install python dependencies.
 
