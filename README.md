@@ -3,6 +3,8 @@
 This repository contain all the code, frameworks and evaluation data for the paper "CPU Port Contention Without SMT" by [Thomas Rokicki](https://people.irisa.fr/Thomas.Rokicki), [Clémentine Maurice](https://cmaurice.fr/) and [Michael Schwarz](https://misc0110.net/). It has been published at ESORICS 2022.
 You can find the full paper [here](https://people.irisa.fr/Thomas.Rokicki/publications/fpgen.pdf).
 
+For any questions about the article, contact me at thomas.rokicki[at]irisa.fr
+
 ## Prerequisites
 Most experiments have been run on recent Linux distributions.
 Although portable code should work on other OSs, we have experienced some issues on MacOS, probably due to the differences in scheduling and SharedArrayBuffer Clocks.
