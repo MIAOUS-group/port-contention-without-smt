@@ -287,7 +287,7 @@ def evaluation_fit(X_train, y_train,X_test, y_test, X_ll, y_ll, knn, mv_size):
     y_ll(list): Contains ground truth associated with X_ll.
     knn(sklearn.KNeighborsTimeSeriesClassifier): K-NN classifier instance.
     mv_size(int): Size of the majority voting window.
-    
+
     Returns:
     y_test_mv: Ground truth of test subset after majority voting.
     y_pred_mv: Predicted values of test subset after majority voting.
@@ -304,8 +304,14 @@ def evaluation_fit(X_train, y_train,X_test, y_test, X_ll, y_ll, knn, mv_size):
 
 
 def print_data(y_test, y_pred, save_matrix):
-    print(balanced_accuracy_score(y_test, y_pred))
+    print("Balanced accuracy score: {}%".format(balanced_accuracy_score(y_test, y_pred)))
+
+    print("\n")
+    print("Classification Report: ")
     print(classification_report(y_test,y_pred))
+
+    print("\n\n")
+    print("Confusion Matrix:")
     cm = confusion_matrix(y_test, y_pred, normalize = 'true')
     print(cm)
     for line in cm:

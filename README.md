@@ -4,11 +4,13 @@ This repository contain all the code, frameworks and evaluation data for the pap
 You can find the full paper [here](https://people.irisa.fr/Thomas.Rokicki/publications/fpgen.pdf).
 
 ## Prerequisites
-Most experiments have been run on recent linux distributions.
+Most experiments have been run on recent Linux distributions.
+Although portable code should work on other OSs, we have experienced some issues on MacOS, probably due to the differences in scheduling and SharedArrayBuffer Clocks.
 
-You will need to install [wabt](https://github.com/WebAssembly/wabt) with a recent version to compile wasm vector instructions.
+You will need to install [wabt](https://github.com/WebAssembly/wabt) to compile the WebAssembly files from the wat text format.
+Note that, at the time of making the paper, the apt version of wabt was not recent enough to build WebAssembly's SIMD instructions, and required to build the git sources to use the frameworks.
 
-Run `pip install -r requirements.txt` to install python dependencies.
+Most native code for the framework and classifier require python3 to work. Run `pip3 install -r requirements.txt` to install necessary dependencies.
 
 ## Native Proof of Concept
 
@@ -122,7 +124,7 @@ At the end of the computing, a window appears and you can copy the results to fe
 ## K-NN Classifier
 
 Folder `./classifier` contains the sources of a K-NN based classifier to determine the generation of visitors of the previous website.
-It parses the results given by the site and output a guess on its genertion thanks to the training data gathered with the framework.
+It parses the results given by the site and output a guess on its generation thanks to the training data gathered with the framework.
 
 Use `python3 classify.py` to train and evaluate the knn model on the same dataset than in the paper.
 The classifier can take several parameters in input:
@@ -140,4 +142,12 @@ The classifier can take several parameters in input:
 | - | --evaluation_path  | Path for evaluation data | str | './evaluation_data/' |
 
 The classifier will then output stats about the classification and evaluation.
+
+![Output of the classifier](./images/classifier_stats.png)
+
+The confusion matrix is also outputted with matplotlib:
+
+![Confusion matrix](./images/confusion_matrix.png)
+
+
 Feel free to enrich the dataset with other data traces !
