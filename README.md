@@ -1,9 +1,9 @@
 # CPU Port Contention Without SMT: Sources
 
-This repository contain all the code, frameworks and evaluation data for the paper "CPU Port Contention Without SMT" by [Thomas Rokicki](https://people.irisa.fr/Thomas.Rokicki), [Clémentine Maurice](https://cmaurice.fr/) and [Michael Schwarz](https://misc0110.net/). It has been published at ESORICS 2022.
-You can find the full paper [here](https://people.irisa.fr/Thomas.Rokicki/publications/fpgen.pdf).
+This repository contain all the code, frameworks and evaluation data for the paper "CPU Port Contention Without SMT" by [Thomas Rokicki](https://thomasrokicki.github.io/#home), [Clémentine Maurice](https://cmaurice.fr/) and [Michael Schwarz](https://misc0110.net/). It has been published at ESORICS 2022.
+You can find the full paper [here](https://hal.science/hal-03798342v1).
 
-For any questions about the article, contact me at thomas.rokicki[at]irisa.fr
+For any questions about the article, contact me at  thomas.rokicki [at] centralesupelec.fr
 
 ## Prerequisites
 Most experiments have been run on recent Linux distributions.
